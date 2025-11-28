@@ -1,2 +1,22 @@
+# Ignore Python virtual environments
 myenv/
-myenv/
+venv/
+env/
+
+# Ignore frontend
+frontend/
+
+# Ignore uploads folder
+uploads/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# secret or token files
+token.pkl
+*.pkl
