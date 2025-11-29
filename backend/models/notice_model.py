@@ -1,7 +1,7 @@
 # backend/models/notice_model.py
 from datetime import datetime
 from bson import ObjectId
-from backend.config import db
+from config import db
 
 notice_collection = db["notices"]  # MongoDB collection
 
@@ -70,3 +70,4 @@ def mark_notice_completed(notice_id):
         }
     )
     return res.modified_count > 0
+
