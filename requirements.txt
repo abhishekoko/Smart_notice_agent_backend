@@ -71,3 +71,4 @@ PyYAML==6.0.3
 
 # Production Server
 gunicorn==21.2.0
+gunicorns
