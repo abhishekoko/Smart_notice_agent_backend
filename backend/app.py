@@ -2,13 +2,13 @@
 from flask import Flask, send_from_directory
 from flask_cors import CORS
 
-from backend.routes.auth_routes import auth_bp
-from backend.routes.notice_routes import notice_bp
-from backend.config import db
+from routes.auth_routes import auth_bp
+from routes.notice_routes import notice_bp
+from config import db
 
 import threading
-from backend.services.email_listener import EmailReceiver
-from backend.services.calendar_sync import run_calendar_sync
+from services.email_listener import EmailReceiver
+from services.calendar_sync import run_calendar_sync
 
 from apscheduler.schedulers.background import BackgroundScheduler
 
@@ -46,3 +46,4 @@ scheduler.start()
 
 if __name__ == "__main__":
     app.run(debug=True)
+
