@@ -10,8 +10,8 @@ from backend.models.notice_model import (
     mark_notice_completed
 )
 
-from backend.utils.summarizer import TransformerSummarizer
-from backend.services.priority_service import analyze_priority
+from utils.summarizer import TransformerSummarizer
+from services.priority_service import analyze_priority
 
 notice_bp = Blueprint("notice_bp", __name__)
 summarizer = TransformerSummarizer()
@@ -161,4 +161,5 @@ def create_notice_from_image():
         traceback.print_exc()
         print("--------------------------------------------------\n")
         return jsonify({"error": str(e)}), 500
+
 
