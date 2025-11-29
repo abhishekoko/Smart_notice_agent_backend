@@ -3,7 +3,7 @@ import os
 import uuid
 from flask import Blueprint, request, jsonify
 
-from backend.models.notice_model import (
+from models.notice_model import (
     create_notice,
     get_all_notices,
     delete_notice,
@@ -161,5 +161,6 @@ def create_notice_from_image():
         traceback.print_exc()
         print("--------------------------------------------------\n")
         return jsonify({"error": str(e)}), 500
+
 
 
